@@ -1,0 +1,1 @@
+# specsentry-maven-plugin
