@@ -1,0 +1,30 @@
+<plugin>
+    <groupId>pro.vinyard.specsentry</groupId>
+    <artifactId>specsentry-maven-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>SpecSentry Maven Plugin</name>
+    <description>SpecSentry Maven Plugin</description>
+    <mojos>
+        <mojo>
+            <goal>scan</goal>
+            <implementation>pro.vinyard.specsentry.SpecSentryMojo</implementation>
+            <description>Scan Java source files and extract comments.</description>
+            <parameters>
+                <parameter>
+                    <name>sources</name>
+                    <type>java.util.List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description>The list of source directories with a default value.</description>
+                </parameter>
+            </parameters>
+        </mojo>
+    </mojos>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.javaparser</groupId>
+            <artifactId>javaparser-core</artifactId>
+            <version>3.23.1</version>
+        </dependency>
+    </dependencies>
+</plugin>
